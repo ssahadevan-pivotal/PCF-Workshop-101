@@ -7,7 +7,7 @@
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.devcloudwest.inbcu.com --skip-ssl-validation
+$ cf api https://api.pcf.centurylinkcloud.com --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -36,9 +36,9 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/manifest.yml <1>
+Using manifest file cf-spring-mvc-boot/manifest.yml <1>
 
-Creating app workshop in org TELCO / space hopper as phopper@pivotal.io...
+Creating app workshop in org groupX / space development as userX@client.com ...
 OK <2>
 
 Creating route workshop-philologic-catchpolery.vert.fe.gopivotal.com...
@@ -48,12 +48,12 @@ Binding workshop-philologic-catchpolery.vert.fe.gopivotal.com to workshop...
 OK <4>
 
 Uploading workshop... <5>
-Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
+Uploading app files from: Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
 Uploading 10.6M, 153 files
 Done uploading               
 OK
 
-Starting app workshop in org TELCO / space hopper as phopper@pivotal.io... <6>
+Starting app workshop in org groupX / space hopper as userX@client.com ... <6>
 -----> Downloaded app package (27M)
 -----> Java Buildpack Version: v3.1.1 (offline) | https://github.com/cloudfoundry/java-buildpack#7a538fb
 -----> Downloading Open Jdk JRE 1.8.0_51 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_51.tar.gz (found in cache)
@@ -74,13 +74,11 @@ OK
 
 App workshop was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-1.1.1_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,stack:5,native:10 -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.7.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY -Djava.security.egd=file:///dev/urandom org.springframework.boot.loader.JarLauncher` <9>
 
-Showing health and status for app workshop in org TELCO / space hopper as phopper@pivotal.io... <10>
 OK
 
 requested state: started
 instances: 1/1
 usage: 512M x 1 instances
-urls: workshop-philologic-catchpolery.vert.fe.gopivotal.com
 last uploaded: Thu Sep 24 20:15:27 UTC 2015
 stack: cflinuxfs2
 buildpack: java-buildpack=v3.1.1-offline-https://github.com/cloudfoundry/java-buildpack#7a538fb java-main java-opts open-jdk-like-jre=1.8.0_51 open-jdk-like-memory-calculator=1.1.1_RELEASE spring-auto-reconfiguration=1.7.0_RELEASE
