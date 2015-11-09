@@ -40,7 +40,7 @@ If you haven't already, login to it by visiting http://console.pcf.centurylinkcl
 
 Click on the ''Marketplace'' link:
 
-image::lab1.png[]
+image::consoleGroup1.png[]
 
 and you'll see the same service/plan/description listing in the browser:
 
