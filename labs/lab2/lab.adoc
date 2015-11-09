@@ -58,7 +58,7 @@ image::lab3.png[]
 Let's take a look at the environment variables for our application. We can do this by viewing to the homepage of the application.
 Here we will see a printout of the environment information.  Take note of what is contained in the section _Bound Services_.  It's an empty JSON document!
 
-. Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart spring-music`.
+. Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart workshop`.
 A _restage_ is generally recommended because Cloud Foundry buildpacks also have access to injected environment variables and can install or configure things differently based on their values.]
 +
 ----
