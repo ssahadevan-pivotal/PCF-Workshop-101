@@ -44,7 +44,7 @@ image::lab1.png[]
 
 and you'll see the same service/plan/description listing in the browser:
 
-image::lab2.png[]
+image::cloudwalkServices.png[]
 
 == Creating and Binding to a Service Instance
 
